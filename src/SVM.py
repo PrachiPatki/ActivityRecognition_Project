@@ -45,6 +45,11 @@ def plot_confusion_matrix(cm, classes,
     plt.ylabel('True label')
     plt.xlabel('Predicted label')
 
+# window calculation
+def window_calculation(overlapping,sampling_rate,window_length):
+    overlapped_window = int(window_length * ((100 - overlapping) / 100))
+    return overlapped_window
+    
 #Divide the data into training and testing
 X_train = pd.read_csv('../data/training_data/training_data.csv')
 Y_train = pd.read_csv('../data/training_data/training_labels.csv',header=None)
@@ -79,7 +84,11 @@ classifier.fit(X_train, Y_train)
 
 print("------------------------ Testing the model-----------------------------")
 label_predicted = classifier.predict(X_test)
-
+window = 0
+overlapped_window = window_calculation(overlapping = 90,sampling_rate = 25,window_length = 75)
+for val in label_predicted:
+    window = window + overlapped_window
+    print('Time(in secs) - '+ str(window/25)+', predicted activity - '+ str(val))
 accuracy = accuracy_score(Y_test, label_predicted)
 
 print("Test Accuracy ")
