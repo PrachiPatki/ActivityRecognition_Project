@@ -136,7 +136,7 @@ def feature_extraction_01(features,features_transformed ,overlapped_window, wind
 
 
 def automate(filepath, label, window_length):
-    data = pd.read_csv(filepath)
+    data = pd.read_csv(filepath, sep = '\t', quoting = 3)
     features = data[['cap1', 'cap2', 'cap3', 'accX', 'accY', 'accZ', 'gyroX', 'gyroY', 'gyroZ']]
 
     # filtering the data;filter parameters
