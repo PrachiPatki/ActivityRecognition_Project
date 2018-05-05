@@ -2,12 +2,17 @@ import tkinter as ui
 from tkinter import filedialog
 import dataprocessing as dp
 import randomForest as rf
+import csv
 
 class App():
     list = ['Time (mins)', 'Kicking', 'Fidgeting', 'Rubbing', 'Crossing', 'Gas Pedal', 'Streching', 'Idle']
+    matrix = []
+    window = 0
     def __init__(self, window, matrix, file):
         col = 0
         row = 0
+        self.matrix = matrix
+        self.window = window
         self.loadFile = file
         self.top = ui.Tk()
         loadFileBtn = ui.Button(self.top, text ="Load File", command = self.loadFileFn)
@@ -64,7 +69,17 @@ class App():
         print('Load File:' + self.loadFile)
     
     def save(self):
-        print('save')
+        print('saveing file')
+        csvfile = filedialog.asksaveasfile(mode='w', defaultextension=".csv")
+        csvwriter = csv.writer(csvfile)
+        csvwriter.writerow(self.list)
+        start = 0
+        end = start + self.window/60
+        for item in self.matrix:
+            csvwriter.writerow([str(start)+" - "+str(end)] + item)
+            start = end
+        csvfile.close()
+        print('file saved')
         
     def run(self):
         matrix = []
