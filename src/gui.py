@@ -4,13 +4,16 @@ import dataprocessing as dp
 import randomForest as rf
 import csv
 
+
 class App():
     list = ['Time (minutes)', 'Kicking', 'Fidgeting', 'Rubbing', 'Crossing', 'Gas Pedal', 'Stretching', 'Idle']
     matrix = []
+    plot = None
     window = 0
-    def __init__(self, window, matrix, file):
+    def __init__(self, window, matrix, file, plot):
         col = 0
         row = 0
+        self.plot = plot
         self.matrix = matrix
         self.window = window
         self.loadFile = file
@@ -22,7 +25,9 @@ class App():
         runBtn = ui.Button(self.top, text ="Run Analysis", command = self.run ,bg="#90b1e5")
         runBtn.grid(row = row, column = col, columnspan=1, sticky='E'+'W')
         col = col+1
-
+        pltBtn = ui.Button(self.top, text="Plot Data", command=self.plotter, bg="#90b1e5")
+        pltBtn.grid(row=row, column=col, columnspan=1, sticky='E' + 'W')
+        col = col + 1
         intLbl = ui.Label(self.top, text ="Interval (minutes):")
         intLbl.grid(row = row, column = col,columnspan = 2, sticky='E')
         col = col+2
@@ -58,11 +63,15 @@ class App():
     
     def runModel(self):
         f2 = "../data/testing_data/testing_data.csv"
-        training_labels = dp.writeTestDataToCSV(f2, False, self.loadFile)
+        training_labels = dp.writeTestDataToCSV(f2, False, self.loadFile, self)
         predictActivity = rf.timeSyncPred()
         predEverySecond = rf.calMaxeverySec(predictActivity)
         return predEverySecond
-        
+
+    def plotter(self):
+        if(self.plot != None):
+            self.plot.show()
+
     def quit(self):
        self.top.destroy()
        
@@ -91,8 +100,10 @@ class App():
         predEverySecond = self.runModel()
         matrix = rf.countWindow(predEverySecond, int(interval)*60)
         self.quit()
-        App(int(interval)*60, matrix, self.loadFile)
+        App(int(interval)*60, matrix, self.loadFile, self.plot)
+
+
 list = []
 for i in range(5):
     list.append([0,0,0,0,0,0,0])
-app = App(120, list, "")
+app = App(120, list, "", None)

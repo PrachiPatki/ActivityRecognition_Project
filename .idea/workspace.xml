@@ -1,7 +1,90 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="c4922f48-ad42-4391-8e4b-80ac70545de4" name="Default" comment="" />
+    <list default="true" id="c4922f48-ad42-4391-8e4b-80ac70545de4" name="Default" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
+      <change beforePath="$PROJECT_DIR$/data/testing_data/testing_data.csv" afterPath="$PROJECT_DIR$/data/testing_data/testing_data.csv" />
+      <change beforePath="$PROJECT_DIR$/dataset/data1/1/kicking_1.csv" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/dataset/data1/1/kicking_2.csv" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/dataset/data1/1/kicking_3.csv" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/dataset/data1/1/kicking_4.csv" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/dataset/data1/1/kicking_5.csv" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/dataset/data1/1/kicking_6.csv" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/dataset/data1/1/kicking_7.csv" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/dataset/data1/1/merged.csv" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/dataset/data1/2/fidgeting_1.csv" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/dataset/data1/2/fidgeting_2.csv" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/dataset/data1/2/fidgeting_3.csv" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/dataset/data1/2/fidgeting_4.csv" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/dataset/data1/2/fidgeting_5.csv" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/dataset/data1/2/fidgeting_6.csv" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/dataset/data1/2/fidgeting_7.csv" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/dataset/data1/2/fidgeting_8.csv" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/dataset/data1/2/merged.csv" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/dataset/data1/3/merged.csv" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/dataset/data1/3/rubbing_1.csv" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/dataset/data1/3/rubbing_2.csv" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/dataset/data1/3/rubbing_3.csv" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/dataset/data1/3/rubbing_4.csv" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/dataset/data1/3/rubbing_5.csv" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/dataset/data1/3/rubbing_6.csv" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/dataset/data1/4/crossing_1.csv" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/dataset/data1/4/crossing_2.csv" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/dataset/data1/4/crossing_3.csv" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/dataset/data1/4/crossing_4.csv" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/dataset/data1/4/crossing_5.csv" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/dataset/data1/4/crossing_6.csv" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/dataset/data1/4/crossing_7.csv" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/dataset/data1/4/merged.csv" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/dataset/data1/5/gas_pedal_1.csv" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/dataset/data1/5/gas_pedal_2.csv" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/dataset/data1/5/gas_pedal_3.csv" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/dataset/data1/5/gas_pedal_4.csv" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/dataset/data1/5/merged.csv" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/dataset/data1/6/merged.csv" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/dataset/data1/6/streching_1.csv" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/dataset/data1/6/streching_2.csv" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/dataset/data1/6/streching_3.csv" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/dataset/data1/6/streching_4.csv" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/dataset/data1/6/streching_5.csv" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/dataset/data1/6/streching_6.csv" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/dataset/data1/7/idle_1.csv" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/dataset/data1/7/idle_2.csv" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/dataset/data1/7/idle_3.csv" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/dataset/data1/7/idle_4.csv" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/dataset/data1/7/idle_5.csv" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/dataset/data1/7/idle_6.csv" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/dataset/data1/7/merged.csv" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/dataset/data1/activity_label_map.xlsx" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/dataset/data1/test_rd/1.csv" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/dataset/data1/test_rd/2.csv" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/dataset/data1/test_rd/3.csv" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/dataset/data1/test_rd/4.csv" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/dataset/data1/test_rd/5.csv" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/dataset/data1/test_rd/6.csv" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/dataset/data1/test_rd/7.csv" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/dataset/data1/testing_data/testing_1.csv" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/dataset/data1/testing_data/testing_2.csv" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/dataset/data1/testing_data/testing_3.csv" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/dataset/data1/testing_data/testing_4.csv" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/dataset/data1/testing_data/testing_5.csv" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/dataset/data1/testing_data/testing_6.csv" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/dataset/data1/testing_data/testing_7.csv" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/dataset/data1/testing_data/testing_data.csv" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/dataset/data1/testing_data/testing_labels.csv" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/dataset/data1/training_data/training_1.csv" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/dataset/data1/training_data/training_2.csv" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/dataset/data1/training_data/training_3.csv" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/dataset/data1/training_data/training_4.csv" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/dataset/data1/training_data/training_5.csv" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/dataset/data1/training_data/training_6.csv" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/dataset/data1/training_data/training_7.csv" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/dataset/data1/training_data/training_data.csv" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/dataset/data1/training_data/training_labels.csv" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/src/dataprocessing.py" afterPath="$PROJECT_DIR$/src/dataprocessing.py" />
+      <change beforePath="$PROJECT_DIR$/src/gui.py" afterPath="$PROJECT_DIR$/src/gui.py" />
+      <change beforePath="$PROJECT_DIR$/src/validate.py" afterPath="$PROJECT_DIR$/src/validate.py" />
+    </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -14,8 +97,8 @@
       <file leaf-file-name="gui.py" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/gui.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="442">
-              <caret line="26" column="64" lean-forward="false" selection-start-line="26" selection-start-column="64" selection-end-line="26" selection-end-column="64" />
+            <state relative-caret-position="85">
+              <caret line="5" column="0" lean-forward="false" selection-start-line="5" selection-start-column="0" selection-end-line="5" selection-end-column="0" />
               <folding>
                 <element signature="e#0#20#0" expanded="true" />
               </folding>
@@ -26,10 +109,22 @@
       <file leaf-file-name="dataprocessing.py" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/dataprocessing.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-198">
-              <caret line="1" column="0" lean-forward="false" selection-start-line="1" selection-start-column="0" selection-end-line="23" selection-end-column="22" />
+            <state relative-caret-position="238">
+              <caret line="182" column="8" lean-forward="false" selection-start-line="182" selection-start-column="8" selection-end-line="182" selection-end-column="8" />
               <folding>
                 <element signature="e#16#26#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="validate.py" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/validate.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="85">
+              <caret line="5" column="0" lean-forward="false" selection-start-line="5" selection-start-column="0" selection-end-line="5" selection-end-column="0" />
+              <folding>
+                <element signature="e#0#27#0" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -55,11 +150,11 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="imports.py" pinned="false" current-in-tab="true">
+      <file leaf-file-name="imports.py" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/imports.py">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="204">
-              <caret line="24" column="27" lean-forward="true" selection-start-line="24" selection-start-column="27" selection-end-line="24" selection-end-column="27" />
+              <caret line="24" column="27" lean-forward="false" selection-start-line="24" selection-start-column="27" selection-end-line="24" selection-end-column="27" />
               <folding />
             </state>
           </provider>
@@ -74,15 +169,22 @@
       </list>
     </option>
   </component>
+  <component name="FindInProjectRecents">
+    <findStrings>
+      <find>writeTestDataToCSV</find>
+    </findStrings>
+  </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/src/gui.py" />
         <option value="$PROJECT_DIR$/src/randomForest.py" />
         <option value="$PROJECT_DIR$/src/imports.py" />
+        <option value="$PROJECT_DIR$/src/plot.py" />
+        <option value="$PROJECT_DIR$/src/gui.py" />
+        <option value="$PROJECT_DIR$/src/validate.py" />
         <option value="$PROJECT_DIR$/src/dataprocessing.py" />
       </list>
     </option>
@@ -114,11 +216,6 @@
               <item name="Activity_Recognition" type="b2602c69:ProjectViewProjectNode" />
               <item name="Activity_Recognition" type="462c0819:PsiDirectoryNode" />
             </path>
-            <path>
-              <item name="Activity_Recognition" type="b2602c69:ProjectViewProjectNode" />
-              <item name="Activity_Recognition" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-            </path>
           </expand>
           <select />
         </subPane>
@@ -143,7 +240,25 @@
       </list>
     </option>
   </component>
-  <component name="RunManager">
+  <component name="RunManager" selected="Python.validate">
+    <configuration name="gui" type="PythonConfigurationType" factoryName="Python" temporary="true">
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/src" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <module name="Activity_Recognition" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/src/gui.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+    </configuration>
     <configuration name="project" type="PythonConfigurationType" factoryName="Python" temporary="true">
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
@@ -162,9 +277,34 @@
       <option name="EMULATE_TERMINAL" value="false" />
       <option name="MODULE_MODE" value="false" />
     </configuration>
+    <configuration name="validate" type="PythonConfigurationType" factoryName="Python" temporary="true">
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/src" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <module name="Activity_Recognition" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/src/validate.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+    </configuration>
+    <list size="3">
+      <item index="0" class="java.lang.String" itemvalue="Python.project" />
+      <item index="1" class="java.lang.String" itemvalue="Python.validate" />
+      <item index="2" class="java.lang.String" itemvalue="Python.gui" />
+    </list>
     <recent_temporary>
-      <list size="1">
-        <item index="0" class="java.lang.String" itemvalue="Python.project" />
+      <list size="3">
+        <item index="0" class="java.lang.String" itemvalue="Python.validate" />
+        <item index="1" class="java.lang.String" itemvalue="Python.gui" />
+        <item index="2" class="java.lang.String" itemvalue="Python.project" />
       </list>
     </recent_temporary>
   </component>
@@ -191,13 +331,13 @@
       <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.24963397" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="R Packages" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="R Graphics" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="R Graphics" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32913387" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
-      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Python Console" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.32913387" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="10" side_tool="false" content_ui="tabs" />
+      <window_info id="Python Console" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
       <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
@@ -213,7 +353,12 @@
     <option name="myLimit" value="2678400000" />
   </component>
   <component name="XDebuggerManager">
-    <breakpoint-manager />
+    <breakpoint-manager>
+      <breakpoints-dialog>
+        <breakpoints-dialog />
+      </breakpoints-dialog>
+      <option name="time" value="5" />
+    </breakpoint-manager>
     <watches-manager />
   </component>
   <component name="editorHistoryManager">
@@ -256,16 +401,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/dataprocessing.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-198">
-          <caret line="1" column="0" lean-forward="false" selection-start-line="1" selection-start-column="0" selection-end-line="23" selection-end-column="22" />
-          <folding>
-            <element signature="e#16#26#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/randomForest.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="85">
@@ -274,13 +409,11 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/gui.py">
+    <entry file="file://$PROJECT_DIR$/src/imports.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="442">
-          <caret line="26" column="64" lean-forward="false" selection-start-line="26" selection-start-column="64" selection-end-line="26" selection-end-column="64" />
-          <folding>
-            <element signature="e#0#20#0" expanded="true" />
-          </folding>
+        <state relative-caret-position="204">
+          <caret line="24" column="27" lean-forward="false" selection-start-line="24" selection-start-column="27" selection-end-line="24" selection-end-column="27" />
+          <folding />
         </state>
       </provider>
     </entry>
@@ -292,11 +425,49 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/imports.py">
+    <entry file="file://$USER_HOME$/AppData/Local/Programs/Python/Python36-32/Lib/site-packages/matplotlib/axes/_base.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="204">
-          <caret line="24" column="27" lean-forward="true" selection-start-line="24" selection-start-column="27" selection-end-line="24" selection-end-column="27" />
+        <state relative-caret-position="132">
+          <caret line="241" column="0" lean-forward="false" selection-start-line="241" selection-start-column="0" selection-end-line="241" selection-end-column="0" />
           <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/gui.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="85">
+          <caret line="5" column="0" lean-forward="false" selection-start-line="5" selection-start-column="0" selection-end-line="5" selection-end-column="0" />
+          <folding>
+            <element signature="e#0#20#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/plot.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/dataprocessing.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="238">
+          <caret line="182" column="8" lean-forward="false" selection-start-line="182" selection-start-column="8" selection-end-line="182" selection-end-column="8" />
+          <folding>
+            <element signature="e#16#26#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/validate.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="85">
+          <caret line="5" column="0" lean-forward="false" selection-start-line="5" selection-start-column="0" selection-end-line="5" selection-end-column="0" />
+          <folding>
+            <element signature="e#0#27#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>

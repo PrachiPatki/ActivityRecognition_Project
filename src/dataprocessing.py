@@ -135,10 +135,52 @@ def feature_extraction_01(features,features_transformed ,overlapped_window, wind
     
     return features_transformed
 
+def plotGraphs(visual, features):
+    if (visual != None):
+        cap_rms = []
+        acc_rms = []
+        gyr_rms = []
+        time = []
+        for i in range(len(features['cap1'])):
+            val = [features['cap1'][i], features['cap2'][i], features['cap3'][i]]
+            val_np = np.asarray(val, dtype=np.float32)
+            rms = np.sqrt(np.mean(val_np ** 2))
+            cap_rms.append(rms)
+            val = [features['accX'][i], features['accY'][i], features['accZ'][i]]
+            val_np = np.asarray(val, dtype=np.float32)
+            rms = np.sqrt(np.mean(val_np ** 2))
+            acc_rms.append(rms)
+            val = [features['gyroX'][i], features['gyroY'][i], features['gyroZ'][i]]
+            val_np = np.asarray(val, dtype=np.float32)
+            rms = np.sqrt(np.mean(val_np ** 2))
+            gyr_rms.append(rms)
+            time.append((i/25.0)/60.0)
+        plt.subplot(3, 1, 1)
+        plt.plot(time, cap_rms)
+        plt.xlabel('Time in minutes')
+        plt.ylabel('Capacitor ')
+        plt.grid(True)
+        plt.axis('tight')
+        plt.subplot(3, 1, 2)
+        plt.plot(time, acc_rms)
+        plt.xlabel('Time in minutes')
+        plt.ylabel('Accelerometer ')
+        plt.grid(True)
+        plt.axis('tight')
+        plt.subplot(3, 1, 3)
+        plt.plot(time, gyr_rms)
+        plt.xlabel('Time in minutes')
+        plt.ylabel('Gyro')
+        plt.grid(True)
+        plt.axis('tight')
+        visual.plot = plt
 
-def automate(filepath, label, window_length):
-    data = pd.read_csv(filepath, sep = '\t', quoting = 3)
-    #data = pd.read_csv(filepath)
+def automate(filepath, label, window_length, isVisual):
+
+    if(isVisual != None):
+        data = pd.read_csv(filepath, sep = '\t', quoting = 3)
+    else:
+        data = pd.read_csv(filepath)
     features = data[['cap1', 'cap2', 'cap3', 'accX', 'accY', 'accZ', 'gyroX', 'gyroY', 'gyroZ']]
 
     # filtering the data;filter parameters
@@ -156,6 +198,8 @@ def automate(filepath, label, window_length):
     features['gyroX'] = butter_bandpass_filter(features['gyroX'], lowcut, highcut, fs)
     features['gyroY'] = butter_bandpass_filter(features['gyroY'], lowcut, highcut, fs)
     features['gyroZ'] = butter_bandpass_filter(features['gyroZ'], lowcut, highcut, fs)
+
+    plotGraphs(isVisual, features)
 
     features1 = normalize([features['cap1'], features['cap2'], features['cap3']])
     features['cap1'] = features1[0]
@@ -182,7 +226,7 @@ def genTrainData():
     window_length = 75
     for i in range(1, 8):
         print("Creating Features for Activity - " + str(i))
-        list.append(automate("../data/"+str(i)+"/merged.csv", i, window_length))
+        list.append(automate("../data/"+str(i)+"/merged.csv", i, window_length, None))
     result = pd.concat(list)
     return result
 
@@ -191,14 +235,14 @@ def genTestDataUniv():
     window_length = 75
     for i in range(1, 8):
         print("Validation Test Activity - " + str(i))
-        list.append(automate("../data/test_rd/"+str(i)+".csv", i, window_length))
+        list.append(automate("../data/test_rd/"+str(i)+".csv", i, window_length, None))
     result = pd.concat(list)
     return result
 
-def genTestData(filePath):
+def genTestData(filePath, uiplot):
     list = []
     window_length = 75
-    list.append(automate(filePath, 0, window_length))
+    list.append(automate(filePath, 0, window_length, uiplot))
     result = pd.concat(list)
     return result
     
@@ -211,7 +255,7 @@ def writeTrainDataToCSV(filePath_data):
     training_frame = training_frame.sample(frac=1).reset_index(drop=True).fillna(0)
     training_frame.to_csv(filePath_data,columns=columns, index=False)
 
-def writeTestDataToCSV(filePath_data, isValidate, loadFile):
+def writeTestDataToCSV(filePath_data, isValidate, loadFile, uiplot):
     try:
         os.remove(filePath_data)
     except:
@@ -219,6 +263,6 @@ def writeTestDataToCSV(filePath_data, isValidate, loadFile):
     if(isValidate):
         testing_frame = genTestDataUniv()
     else:
-        testing_frame = genTestData(loadFile)
+        testing_frame = genTestData(loadFile, uiplot)
     testing_frame.to_csv(filePath_data,columns=columns, index=False)
 
