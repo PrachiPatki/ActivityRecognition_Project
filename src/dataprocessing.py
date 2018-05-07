@@ -24,16 +24,16 @@ from scipy.fftpack import fft, rfft, irfft
 import statistics as s
 
 # mean, var, hm, peaks, skew, energy ,rms
-columns = ['label', 
-           'cap1_mean', 'cap1_var', 'cap1_hm', 'cap1_peaks', 'cap1_skew', 'cap1_energy',
-           'cap2_mean', 'cap2_var', 'cap2_hm', 'cap2_peaks', 'cap2_skew', 'cap2_energy',
-           'cap3_mean', 'cap3_var', 'cap3_hm', 'cap3_peaks', 'cap3_skew', 'cap3_energy',
-           'accX_mean', 'accX_var', 'accX_hm', 'accX_peaks', 'accX_skew', 'accX_energy',
-           'accY_mean', 'accY_var', 'accY_hm', 'accY_peaks', 'accY_skew', 'accY_energy',
-           'accZ_mean', 'accZ_var', 'accZ_hm', 'accZ_peaks', 'accZ_skew', 'accZ_energy',
-           'gyroX_mean', 'gyroX_var', 'gyroX_hm', 'gyroX_peaks', 'gyroX_skew', 'gyroX_energy',
-           'gyroY_mean', 'gyroY_var', 'gyroY_hm', 'gyroY_peaks', 'gyroY_skew', 'gyroY_energy',
-           'gyroZ_mean', 'gyroZ_var', 'gyroZ_hm', 'gyroZ_peaks', 'gyroZ_skew', 'gyroZ_energy']
+columns = ['label',
+           'cap1_mean', 'cap1_var', 'cap1_hm', 'cap1_peaks', 'cap1_skew', 'cap1_energy','cap1_sd',
+           'cap2_mean', 'cap2_var', 'cap2_hm', 'cap2_peaks', 'cap2_skew', 'cap2_energy','cap2_sd',
+           'cap3_mean', 'cap3_var', 'cap3_hm', 'cap3_peaks', 'cap3_skew', 'cap3_energy','cap3_sd',
+           'accX_mean', 'accX_var', 'accX_hm', 'accX_peaks', 'accX_skew', 'accX_energy', 'accX_sd',
+           'accY_mean', 'accY_var', 'accY_hm', 'accY_peaks', 'accY_skew', 'accY_energy', 'accY_sd',
+           'accZ_mean', 'accZ_var', 'accZ_hm', 'accZ_peaks', 'accZ_skew', 'accZ_energy', 'accZ_sd',
+           'gyroX_mean', 'gyroX_var', 'gyroX_hm', 'gyroX_peaks', 'gyroX_skew', 'gyroX_energy', 'gyroX_sd',
+           'gyroY_mean', 'gyroY_var', 'gyroY_hm', 'gyroY_peaks', 'gyroY_skew', 'gyroY_energy', 'gyroY_sd',
+           'gyroZ_mean', 'gyroZ_var', 'gyroZ_hm', 'gyroZ_peaks', 'gyroZ_skew', 'gyroZ_energy', 'gyroZ_sd']
 
 
 #Butter Bandpass filter
@@ -89,12 +89,12 @@ def calculateHarmonicMean(dataF):
     hMeanFrame = pd.DataFrame(stats.hmean(abs(dataF), axis=0))
     return hMeanFrame
 
-# calaculating Root Mean Square
-def calculateRMS(dataF):
-    squaredFrame = dataF ** 2
-    meanFrame = squaredFrame.mean()
-    RMSFrame = np.sqrt(meanFrame)
-    return RMSFrame
+# calculating Spectral Centroid
+def spectral_centroid(x, samplerate=25):
+    magnitudes = np.abs(np.fft.rfft(x)) # magnitudes of positive frequencies
+    length = len(x)
+    freqs = np.abs(np.fft.fftfreq(length, 1.0/samplerate)[:length//2+1]) # positive frequencies
+    return np.sum(magnitudes*freqs) / np.sum(magnitudes) # return weighted mean
 
 # window calculation
 def window_calculation(overlapping,sampling_rate,window_length):
@@ -126,10 +126,11 @@ def feature_extraction_01(features,features_transformed ,overlapped_window, wind
             skew = calculateSkew(data_window)
             #Feature 6: Energy
             energy = calculateEnergy(data_window)
-            #Feature 7 : RMS
-            #rms = calculateRMS(data_window)           
-            row_list = row_list + [mean, var, hm, peaks, skew, energy ]            
-        features_transformed.loc[count,0:54]  = row_list
+            # Feature : Spectral Centroid
+            sd = spectral_centroid(data_window, samplerate=25)
+
+            row_list = row_list + [mean, var, hm, peaks, skew, energy ,sd ]
+        features_transformed.loc[count,0:63]  = row_list
         count = count + 1
     
     return features_transformed
@@ -137,6 +138,7 @@ def feature_extraction_01(features,features_transformed ,overlapped_window, wind
 
 def automate(filepath, label, window_length):
     data = pd.read_csv(filepath, sep = '\t', quoting = 3)
+    #data = pd.read_csv(filepath)
     features = data[['cap1', 'cap2', 'cap3', 'accX', 'accY', 'accZ', 'gyroX', 'gyroY', 'gyroZ']]
 
     # filtering the data;filter parameters
@@ -188,7 +190,7 @@ def genTestDataUniv():
     list = []
     window_length = 75
     for i in range(1, 8):
-        print("Creating Fearures for Test Data Activity - " + str(i))
+        print("Validation Test Activity - " + str(i))
         list.append(automate("../data/test_rd/"+str(i)+".csv", i, window_length))
     result = pd.concat(list)
     return result

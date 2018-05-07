@@ -15,15 +15,17 @@ from sklearn import svm
 from sklearn.metrics import accuracy_score
 from sklearn.metrics import confusion_matrix
 import itertools
-columnsData = ['cap1_mean', 'cap1_var', 'cap1_hm', 'cap1_peaks', 'cap1_skew', 'cap1_energy',
-               'cap2_mean', 'cap2_var', 'cap2_hm', 'cap2_peaks', 'cap2_skew', 'cap2_energy',
-               'cap3_mean', 'cap3_var', 'cap3_hm', 'cap3_peaks', 'cap3_skew', 'cap3_energy',
-               'accX_mean', 'accX_var', 'accX_hm', 'accX_peaks', 'accX_skew', 'accX_energy',
-               'accY_mean', 'accY_var', 'accY_hm', 'accY_peaks', 'accY_skew', 'accY_energy',
-               'accZ_mean', 'accZ_var', 'accZ_hm', 'accZ_peaks', 'accZ_skew', 'accZ_energy',
-               'gyroX_mean', 'gyroX_var', 'gyroX_hm', 'gyroX_peaks', 'gyroX_skew', 'gyroX_energy',
-               'gyroY_mean', 'gyroY_var', 'gyroY_hm', 'gyroY_peaks', 'gyroY_skew', 'gyroY_energy',
-               'gyroZ_mean', 'gyroZ_var', 'gyroZ_hm', 'gyroZ_peaks', 'gyroZ_skew', 'gyroZ_energy']
+
+columnsData = ['cap1_mean', 'cap1_var', 'cap1_hm', 'cap1_peaks', 'cap1_skew', 'cap1_energy','cap1_sd',
+           'cap2_mean', 'cap2_var', 'cap2_hm', 'cap2_peaks', 'cap2_skew', 'cap2_energy','cap2_sd',
+           'cap3_mean', 'cap3_var', 'cap3_hm', 'cap3_peaks', 'cap3_skew', 'cap3_energy','cap3_sd',
+           'accX_mean', 'accX_var', 'accX_hm', 'accX_peaks', 'accX_skew', 'accX_energy', 'accX_sd',
+           'accY_mean', 'accY_var', 'accY_hm', 'accY_peaks', 'accY_skew', 'accY_energy', 'accY_sd',
+           'accZ_mean', 'accZ_var', 'accZ_hm', 'accZ_peaks', 'accZ_skew', 'accZ_energy', 'accZ_sd',
+           'gyroX_mean', 'gyroX_var', 'gyroX_hm', 'gyroX_peaks', 'gyroX_skew', 'gyroX_energy', 'gyroX_sd',
+           'gyroY_mean', 'gyroY_var', 'gyroY_hm', 'gyroY_peaks', 'gyroY_skew', 'gyroY_energy', 'gyroY_sd',
+           'gyroZ_mean', 'gyroZ_var', 'gyroZ_hm', 'gyroZ_peaks', 'gyroZ_skew', 'gyroZ_energy', 'gyroZ_sd']
+
 
 def countWindow(list, window):
     result = []
@@ -98,7 +100,7 @@ def loadAndPredict():
     Y_train = Y_train.fillna(0)
     X_train = X_train.astype('int')
     Y_train = Y_train.astype('int')
-    #X_train, X_test, y_train, y_test = train_test_split(total_data, total_label, test_size=0.10, random_state=1)
+
     test = pd.read_csv('../data/testing_data/testing_data.csv')
     Y_test = test['label']
     X_test = test[columnsData]
